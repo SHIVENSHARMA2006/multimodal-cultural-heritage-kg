@@ -227,3 +227,44 @@ def view_html_report():
         raise HTTPException(status_code=404, detail="HTML report not found.")
     with open(html_path, "r", encoding="utf-8") as f:
         return HTMLResponse(content=f.read(), status_code=200)
+
+@app.get("/download/blueprint.docx", tags=["Engineering Blueprint"])
+def download_blueprint_docx():
+    path = os.path.abspath("Comprehensive_System_Architecture_and_Engineering_Blueprint.docx")
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Blueprint Word document not found.")
+    return FileResponse(
+        path,
+        media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        filename="Comprehensive_System_Architecture_and_Engineering_Blueprint.docx"
+    )
+
+@app.get("/download/blueprint.pdf", tags=["Engineering Blueprint"])
+def download_blueprint_pdf():
+    path = os.path.abspath("Comprehensive_System_Architecture_and_Engineering_Blueprint.pdf")
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Blueprint PDF document not found.")
+    return FileResponse(
+        path,
+        media_type="application/pdf",
+        filename="Comprehensive_System_Architecture_and_Engineering_Blueprint.pdf"
+    )
+
+@app.get("/download/blueprint.html", tags=["Engineering Blueprint"])
+def download_blueprint_html():
+    path = os.path.abspath("system_blueprint_view.html")
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Blueprint HTML not found.")
+    return FileResponse(
+        path,
+        media_type="text/html",
+        filename="Comprehensive_System_Architecture_and_Engineering_Blueprint.html"
+    )
+
+@app.get("/blueprint", tags=["Engineering Blueprint"], response_class=HTMLResponse)
+def view_html_blueprint():
+    path = os.path.abspath("system_blueprint_view.html")
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Blueprint HTML view not found.")
+    with open(path, "r", encoding="utf-8") as f:
+        return HTMLResponse(content=f.read(), status_code=200)

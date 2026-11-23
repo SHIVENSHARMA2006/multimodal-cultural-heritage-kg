@@ -101,24 +101,36 @@ with st.sidebar:
     st.markdown(f"**Verified Sources**: `{stats['total_sources']}`")
     
     st.markdown("---")
-    st.markdown("### 📥 Download Project Report")
+    st.markdown("### 📥 Download Documents")
     docx_file = "Multimodal_Cultural_Heritage_NLP_Project_Report.docx"
     pdf_file = "Multimodal_Cultural_Heritage_NLP_Project_Report.pdf"
+    bp_docx = "Comprehensive_System_Architecture_and_Engineering_Blueprint.docx"
+    bp_pdf = "Comprehensive_System_Architecture_and_Engineering_Blueprint.pdf"
+    
     if os.path.exists(docx_file):
         with open(docx_file, "rb") as f:
             st.download_button(
-                label="📥 Word Report (.docx)",
+                label="📥 Academic Report (.docx)",
                 data=f.read(),
                 file_name=docx_file,
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                 use_container_width=True
             )
-    if os.path.exists(pdf_file):
-        with open(pdf_file, "rb") as f:
+    if os.path.exists(bp_docx):
+        with open(bp_docx, "rb") as f:
             st.download_button(
-                label="📄 PDF Report (.pdf)",
+                label="📐 Engineering Blueprint (.docx)",
                 data=f.read(),
-                file_name=pdf_file,
+                file_name=bp_docx,
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                use_container_width=True
+            )
+    if os.path.exists(bp_pdf):
+        with open(bp_pdf, "rb") as f:
+            st.download_button(
+                label="📄 Engineering Blueprint (.pdf)",
+                data=f.read(),
+                file_name=bp_pdf,
                 mime="application/pdf",
                 use_container_width=True
             )
@@ -1134,6 +1146,55 @@ elif nav_choice == "📄 Academic Project Report & Downloads":
                     use_container_width=True
                 )
         st.caption("Standalone HTML web page with interactive buttons and print styling.")
+
+    st.markdown("---")
+    st.markdown("### 📐 Complete Technical Architecture & Engineering Specification Blueprint")
+    st.markdown(
+        "Exhaustive low-level engineering specification manual covering **backend and frontend internals, 4-modality ingestion pipelines, "
+        "CIDOC-CRM E13 ontology schemas, NetworkX BFS algorithms, FastAPI contracts, Streamlit state machines, mathematical formulations, "
+        "and complete replication instructions** to rebuild this exact project without visual screenshots."
+    )
+
+    bp_c1, bp_c2, bp_c3 = st.columns(3)
+    bp_docx_p = "Comprehensive_System_Architecture_and_Engineering_Blueprint.docx"
+    bp_pdf_p = "Comprehensive_System_Architecture_and_Engineering_Blueprint.pdf"
+    bp_html_p = "system_blueprint_view.html"
+
+    with bp_c1:
+        if os.path.exists(bp_docx_p):
+            with open(bp_docx_p, "rb") as f:
+                st.download_button(
+                    label="📥 Download Blueprint (.docx)",
+                    data=f.read(),
+                    file_name="Comprehensive_System_Architecture_and_Engineering_Blueprint.docx",
+                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                    use_container_width=True
+                )
+        st.caption("Complete Microsoft Word engineering manual with low-level specs and tables.")
+
+    with bp_c2:
+        if os.path.exists(bp_pdf_p):
+            with open(bp_pdf_p, "rb") as f:
+                st.download_button(
+                    label="📄 Download Blueprint (.pdf)",
+                    data=f.read(),
+                    file_name="Comprehensive_System_Architecture_and_Engineering_Blueprint.pdf",
+                    mime="application/pdf",
+                    use_container_width=True
+                )
+        st.caption("29-page publication-ready PDF printable engineering blueprint.")
+
+    with bp_c3:
+        if os.path.exists(bp_html_p):
+            with open(bp_html_p, "rb") as f:
+                st.download_button(
+                    label="🌐 Download Blueprint HTML",
+                    data=f.read(),
+                    file_name="Comprehensive_System_Architecture_and_Engineering_Blueprint.html",
+                    mime="text/html",
+                    use_container_width=True
+                )
+        st.caption("Standalone HTML document readable in any web browser.")
 
     st.markdown("---")
     st.markdown("### 📚 Report Chapter Structure & Visual Assets")
