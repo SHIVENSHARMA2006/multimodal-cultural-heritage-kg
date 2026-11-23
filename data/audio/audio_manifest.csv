@@ -1,0 +1,5 @@
+media_id,filename,filepath,title,speaker_or_performer,language,duration_sec,consent_status,access_tier,provenance_notes
+M01,tǝpta_story.wav,data/audio/tǝpta_story.wav,Retelling of Tǝpta (Meitei folk narrative),N. Gurachandra (Imphal East),Meitei (mni),12.0,documented_consent,public,Consented recording under academic CC BY-NC 4.0; UNT CoRSAL collection
+M08,sankirtana_khol_kartal.wav,data/audio/sankirtana_khol_kartal.wav,Sankirtana Ritual Invocation (Khol & Kartal),Guru N. Tombi & Chorus,Classical Meitei / Manipuri,15.0,documented_consent,public,Public ritual documentation / UNESCO Intangible Heritage
+M05,elder_kangla_testimony.wav,data/audio/elder_kangla_testimony.wav,Oral Testimony on Kangla Citadel Sacred Origin,Elder M. Ningthouja (Sanaleibak),Manipuri (Meitei),10.0,documented_consent,public,Oral testimony recorded with informed consent; community sovereignty preserved
+M06,lai_haraoba_jagoi_chant.wav,data/audio/lai_haraoba_jagoi_chant.wav,Lai Haraoba Traditional Maibi Chant,Maibi Chaobi Devi,Old Meitei,14.0,documented_consent,public,Traditional ritual song preserved under open community archive

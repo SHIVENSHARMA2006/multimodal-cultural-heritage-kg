@@ -1,0 +1,42 @@
+﻿qa_id,question,question_type,expected_answer,evidence_claim_ids,expected_behavior,difficulty,query_language,split,notes
+Q01,In which year was Sankirtana of Manipur inscribed on UNESCO's Representative List of the Intangible Cultural Heritage of Humanity?,factual_agreed,"2013 (December 2013, eighth session of the Intergovernmental Committee in Baku).",C084;C085,answer,easy,en,train,
+Q02,What does the name 'Kangla' mean in old Meetei?,factual_single,'The prominent part of the dry land'.,C003,answer,easy,en,train,
+Q03,Who manages Kangla Fort today?,factual_single,The Kangla Fort Board; the fort was handed to the state government in 2004.,C010;C009,answer,easy,en,train,
+Q04,How many hours of Manipuri speech are in the IndicVoices-R corpus?,factual_single,"23.99 hours (9,312 utterances, 127 speakers).",C185;C186,answer,easy,en,train,
+Q05,In which script is the Manipuri data in the 14-language speech-translation dataset provided?,factual_single,"Bengali script, not Meitei script.",C192,answer,medium,en,test,
+Q06,On what date did the British take possession of Kangla Palace in 1891?,factual_agreed,27 April 1891.,C129;C130;C131,answer,easy,en,test,Agreement control
+Q07,When and where was Tikendrajit hanged?,factual_agreed,"13 August 1891 at Pheida-pung, a polo ground later renamed Bir Tikendrajit Park.",C141;C142;C143,answer,easy,en,test,
+Q08,On what date is Khongjom Day observed?,factual_agreed,23 April.,C145;C146,answer,easy,en,test,
+Q09,Who is credited with the Manipuri Raas Leela form?,alias_resolution,"Rajarshi Bhagyachandra, also known as Ching-Thang Khomba.",C107,answer,medium,en,train,
+Q10,Which body recognises Manipuri as a classical dance form of India?,factual_single,The Sangeet Natak Akademi.,C106,answer,easy,en,train,
+Q11,When was the Manipur State Archives established?,factual_single,March 1982.,C167,answer,easy,en,train,
+Q12,Which ministry launched the National Mission for Manuscripts and when?,factual_single,"The Ministry of Culture, in 2003.",C171,answer,easy,en,dev,
+Q13,What are the five categories of Raas dance?,factual_single,"Maha, Basanta, Kunja, Divya and Nitya Raas.",C109,answer,easy,en,train,
+Q14,"Which Meitei deity is associated with horses and polo, and what complex is dedicated to him?",factual_single,Marjing; the Marjing Polo Complex in Imphal East.,C036;C037,answer,easy,en,train,
+Q15,What does 'Lai Haraoba' literally mean?,factual_single,'Merrymaking of the gods'.,C094,answer,easy,en,train,
+Q16,Since which year have students been taught in Meitei Mayek?,factual_single,2006.,C040,answer,easy,en,train,
+Q17,"In what year did Gareeb Nawaz convert to Chaitanya-style Vaishnavism, and by what other names is he known?",alias_resolution,"1717; also called Pamheiba, Garib Niwaz, Gharib Nawaz.",C081;C082;C083,answer,medium,en,test,Tests alias resolution across spellings
+Q18,When did King Ching-Thang Khomba reign?,alias_resolution,1759-1798 CE (single tier-C source; low confidence).,C117,answer,medium,en,train,Answer should note single weak source
+Q19,"What open speech resources exist for Manipuri, and what limits their use for Meitei-script ASR?",cross_source,IndicVoices-R has 23.99 h of Manipuri; the Mann Ki Baat speech-translation data is in Bengali script; both are general-domain rather than heritage-specific.,C185;C192,answer,hard,en,test,
+Q20,Which archives or projects hold or digitise Meetei Mayek manuscripts relevant to Manipur's royal chronicle?,cross_source,"Manipur Royal Palace (original per BnF), Royal Asiatic Society Archives (Parratt papers), DigitizeManipur consortium, Manipur State Archives.",C070;C183;C174;C169,answer,hard,en,test,
+Q21,Which museums are inside Kangla Fort and where can images of them be found?,cross_modal,"Kangla Museum, Archaeological Museum, Memento Museum; Wikimedia Commons category 'Museums in Kangla'.",C012;C013,answer,medium,en,train,
+Q22,When were the Puyas burned?,conflict_sources,Sources differ: 1726; 23 Jan 1729; 1729 or 1732; and an apocryphal 1732 claim judged likely forged. Some historians also contest that it happened as described.,C057;C055;C056;C058;C060,present_all_perspectives,hard,en,test,
+Q23,How many letters does Meitei Mayek have?,conflict_sources,"18 (archaic), 27 (official since 1980), with 35- and 36-letter proposals.",C042;C041;C043;C044,present_all_perspectives,hard,en,train,
+Q24,How old is the Meitei Mayek script?,conflict_sources,"Estimates range from several hundred to over 3,000 years; one cited source dates an archaic form to the 11th century.",C045;C046,present_all_perspectives,hard,en,train,
+Q25,When was Kangla established?,conflict_sources,Chronicle-based accounts say 33 CE but one source notes no archaeological evidence; Khagemba-era building dated 1611 or 1632.,C004;C005;C006;C007,present_all_perspectives,hard,en,train,
+Q26,Which is the world's oldest polo ground?,conflict_sources,"Two claimants: Mapal Kangjeibung (Imphal Polo Ground, 'oldest'/'oldest functional') and Manung Kangjeibung inside Kangla ('may be' the oldest).",C027;C028;C025,present_all_perspectives,medium,en,dev,
+Q27,Who introduced sagol kangjei and when was the first match?,conflict_sources,Myth: gods Marjing and Thangjing; chronicle: King Kangba before 33 CE; one source: first organised match in 33 AD under Nongda Pakhangba.,C030;C031;C032,present_all_perspectives,hard,en,train,
+Q28,How many vendors work at Ima Keithel?,conflict_sources,"Reports range from about 3,615 licensed vendors to 5,000+ and 6,000, likely on different counting bases.",C151;C152;C153,present_all_perspectives,medium,en,train,
+Q29,When was Ima Keithel founded?,conflict_sources,One source says 1533 AD; others say 16th century or 500+ years; these are compatible but differ in precision.,C155;C156;C157,present_all_perspectives,medium,en,train,Negative control: compatible-precision difference
+Q30,When is Lai Haraoba held?,conflict_sources,One source says there are no fixed dates; another gives an auspicious day between February and July.,C096;C097,present_all_perspectives,medium,en,train,
+Q31,When did King Kiyamba's reign end?,conflict_sources,"1507, 1508 or 1523 depending on source; 1523 is an outlier.",C121;C120;C122,present_all_perspectives,medium,en,dev,
+Q32,How many people were hanged after the Anglo-Manipur War?,conflict_sources,Two (Tikendrajit and Thangal General) per some sources; Tikendrajit plus four others per another.,C137;C138,present_all_perspectives,hard,en,test,
+Q33,What was Manipur's status after 1891?,conflict_sources,"Described as a protectorate, a princely state under indirect rule, and as annexed, depending on source.",C132;C133;C134,present_all_perspectives,hard,en,test,
+Q34,Until what year does the Cheitharol Kumbaba run?,conflict_sources,1891 or 1892 (Parratt's volumes) versus 1955 (BnF notice).,C075;C076;C077,present_all_perspectives,medium,en,dev,
+Q35,How many manuscripts exist in Manipur?,conflict_sources,"A study says about 1,000; an official says over 5.87 lakh digitised; likely different counting units.",C177;C178,present_all_perspectives,hard,en,test,
+Q36,How many hours of speech does IndicVoices contain?,conflict_sources,"7,348 hours in the March 2024 paper; 12,000 hours in the later AI4Bharat catalogue.",C189;C190,present_all_perspectives,medium,en,dev,
+Q37,Who designed the 2006 Kangla Sha statues?,unanswerable,Not in the dataset.,,abstain_not_in_kg,medium,en,test,Hallucination probe
+Q38,How many Puya manuscripts are currently held in the Kangla Museum?,unanswerable,Not in the dataset.,,abstain_not_in_kg,medium,en,test,Hallucination probe
+Q39,What does a village elder's recorded oral account say about Kangla's origin?,unanswerable,No oral testimony is included; the system should abstain and flag the oral-modality gap.,,abstain_not_in_kg,hard,en,test,Highlights missing oral modality
+Q40,In what year was the very first Lai Haraoba held?,unanswerable,Not in the dataset.,,abstain_not_in_kg,medium,en,dev,Hallucination probe
+Q41,How long is the UNESCO video on Sankirtana?,factual_single,9 minutes 57 seconds.,C091,answer,easy,en,dev,
